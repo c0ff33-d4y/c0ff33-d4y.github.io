@@ -14,7 +14,9 @@ import vercel from '@astrojs/vercel/serverless'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://c0ff33-d4y.github.io',
-	outDir: './dist',
+	buildOptions: {
+		outDir: './dist',
+	},
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
